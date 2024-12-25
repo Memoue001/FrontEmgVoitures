@@ -1,0 +1,116 @@
+/* Chargement */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #4CAF50;
+    margin-top: 50px;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  
+  /* Détails de la voiture */
+  .car-details {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .car-header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .back-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Informations sur la voiture */
+  .car-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .car-info-left {
+    flex: 1;
+  }
+  
+  .car-info-left p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .car-info-left strong {
+    color: #333;
+  }
+  
+  .car-info-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .car-photo {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  
+  .car-photo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .car-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .car-info-left {
+      text-align: center;
+    }
+  
+    .car-info-right {
+      margin-top: 20px;
+      justify-content: center;
+    }
+  
+    .car-photo {
+      max-width: 250px;
+    }
+  }
+  

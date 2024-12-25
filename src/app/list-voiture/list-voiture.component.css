@@ -1,0 +1,31 @@
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+
+  
+  .btn-outline-info:hover {
+    background: #0dcaf0;
+    color: rgb(196, 190, 190);
+  }
+  
+  .btn-outline-primary:hover {
+    background: #0d6efd;
+    color: rgb(229, 224, 224);
+  }
+  
+  .btn-outline-danger:hover {
+    background: #dc3545;
+    color: rgb(240, 235, 235);
+  }
+  

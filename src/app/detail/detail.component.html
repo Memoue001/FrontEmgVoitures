@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="loading">
+    <p>Chargement des détails de la voiture...</p>
+  </div>
+  
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+  
+  <div *ngIf="!loading && voiture && voiture.id" class="car-details">
+    <div class="car-header">
+      <h2>Détails de la voiture</h2>
+      <a class="back-btn" href="/list">Retour à la liste</a>
+    </div>
+  
+    <div class="car-info">
+      <div class="car-info-left">
+        <p><strong>Marque :</strong> {{ voiture.make }}</p>
+        <p><strong>Modèle :</strong> {{ voiture.model }}</p>
+        <p><strong>Année :</strong> {{ voiture.year }}</p>
+        <p><strong>Description :</strong> {{ voiture.description }}</p>
+        <p><strong>URL Photo :</strong> <a [href]="voiture.photoUrl" target="_blank">{{ voiture.photoUrl }}</a></p>
+      </div>
+  
+      <div class="car-info-right">
+        <div *ngIf="voiture.photoUrl" class="car-photo">
+          <img [src]="voiture.photoUrl" alt="Photo de la voiture" class="car-photo-img"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  

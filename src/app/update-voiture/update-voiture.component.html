@@ -1,0 +1,47 @@
+<div *ngIf="voitureForm">
+  <h2>Mettre à jour la voiture</h2>
+  
+  <form [formGroup]="voitureForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="make" class="form-label">Marque</label>
+      <input id="make" formControlName="make" class="form-control" type="text" />
+      <div *ngIf="voitureForm.get('make')?.invalid && voitureForm.get('make')?.touched" class="text-danger">
+        La marque est requise.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="model" class="form-label">Modèle</label>
+      <input id="model" formControlName="model" class="form-control" type="text" />
+      <div *ngIf="voitureForm.get('model')?.invalid && voitureForm.get('model')?.touched" class="text-danger">
+        Le modèle est requis.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="year" class="form-label">Année</label>
+      <input id="year" formControlName="year" class="form-control" type="number" />
+      <div *ngIf="voitureForm.get('year')?.invalid && voitureForm.get('year')?.touched" class="text-danger">
+        L'année est requise et doit être supérieure ou égale à 2010.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+      <div *ngIf="voitureForm.get('description')?.invalid && voitureForm.get('description')?.touched" class="text-danger">
+        La description est requise.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="photoUrl" class="form-label">URL Photo</label>
+      <input id="photoUrl" formControlName="photoUrl" class="form-control" type="url" />
+      <div *ngIf="voitureForm.get('photoUrl')?.invalid && voitureForm.get('photoUrl')?.touched" class="text-danger">
+        L'URL de la photo est requise et doit être valide.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="voitureForm.invalid">Mettre à jour</button>
+  </form>
+</div>
