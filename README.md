@@ -1,3 +1,5 @@
+# Pour le lancement en local < il faut lancer le back et le front separement >
+
 # FrontEmgVoitures
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
